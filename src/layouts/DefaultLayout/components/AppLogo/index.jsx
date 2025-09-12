@@ -6,9 +6,9 @@ const AppLogo = () => {
       <Link to="/">
         <img className={styles.logo} src="f8-icon.png" alt="F8" />
       </Link>
-      <a className={styles.subTitle} href="/">
+      <Link className={styles.subTitle} href="/">
         Học Lập Trình Để Đi Làm
-      </a>
+      </Link>
     </h1>
   );
 };
