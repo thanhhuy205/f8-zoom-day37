@@ -3,11 +3,11 @@ import Home from "@/pages/Home";
 import ModalDemo from "@/pages/ModalDemo";
 import Profile from "@/pages/Profile";
 import ScrollDemo from "@/pages/ScrollDemo";
-import { BrowserRouter, Route, Routes } from "react-router";
+import { HashRouter, Route, Routes } from "react-router";
 
 const AppRoutes = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route element={<DefaultLayout />}>
           <Route index element={<Home />} />
@@ -16,7 +16,7 @@ const AppRoutes = () => {
           <Route path="/scroll-demo" element={<ScrollDemo />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
