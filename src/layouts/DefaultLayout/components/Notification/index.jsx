@@ -38,7 +38,7 @@ const Notification = () => {
         <div className="space-y-4">
           <DropItem className="p-2 hover:bg-gray-50 rounded-lg items-start gap-3 text-xl">
             <figure className="flex items-center justify-center size-15 rounded-full bg-gradient-to-r from-orange-500 to-red-500 text-white font-bold">
-              <img className="rounded-full" src="/f8-icon.png" alt="" />
+              <img className="rounded-full" src="f8-icon.png" alt="" />
             </figure>
 
             <div className="flex-1 flex flex-col text-left">
