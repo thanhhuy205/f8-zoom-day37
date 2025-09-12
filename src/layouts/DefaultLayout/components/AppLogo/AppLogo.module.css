@@ -1,0 +1,10 @@
+@reference "tailwindcss";
+
+@layer {
+  .logo {
+    @apply w-[38px] h-[38px] flex-shrink-0 object-contain rounded-[8px];
+  }
+  .subTitle {
+    @apply text-[1.4rem] font-[700] ml-[16px] text-[#000];
+  }
+}

@@ -1,0 +1,13 @@
+@reference "tailwindcss";
+@layer {
+  .searchForm {
+    @apply w-[420px] max-w-[100%] h-[40px] px-[12px] py-[0] border-[2px] border-[#e8ebed] rounded-[20px] transition-[border-color] duration-[.2s] ease-in-out;
+  }
+
+  .searchForm:focus-within {
+    @apply border-[#000];
+  }
+  .searchInput {
+    @apply flex-1 h-full border-0 outline-0 text-[1.4rem] placeholder:text-[1.4rem];
+  }
+}

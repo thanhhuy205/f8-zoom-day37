@@ -1,0 +1,10 @@
+@reference "tailwindcss";
+
+@layer {
+  #header {
+    @apply fixed top-0 left-0 right-0 z-20 flex items-center gap-[30px] px-[28px] h-[var(--header-height)] border-b border-[#e8ebed] bg-white text-[1.4rem];
+  }
+  .logo {
+    @apply w-[38px] h-[38px] flex-shrink-0 object-contain rounded-[8px];
+  }
+}
