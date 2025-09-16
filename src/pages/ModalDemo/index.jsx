@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Modal from "../../components/Modal";
 
 function ModalDemo() {
@@ -8,6 +8,7 @@ function ModalDemo() {
   const [noEscClose, setNoEscClose] = useState(false);
   const [customStyleOpen, setCustomStyleOpen] = useState(false);
   const [callbackOpen, setCallbackOpen] = useState(false);
+  const modalRef = useRef(null);
 
   return (
     <div className="space-y-6 p-6">
@@ -164,6 +165,34 @@ function ModalDemo() {
             <button
               className="px-3 py-1 bg-red-500 text-white rounded"
               onClick={() => setCallbackOpen(false)}
+            >
+              Đóng
+            </button>
+          </div>
+        </Modal>
+      </div>
+      <div>
+        <h2 className="font-bold">7. Modal useRef forwardRef</h2>
+        <button
+          className="px-4 py-2 bg-blue-500 text-white rounded"
+          onClick={() => modalRef.current.open()}
+        >
+          Mở Modal
+        </button>
+        <Modal
+          ref={modalRef}
+          onRequestClose={() => modalRef.current.close()}
+          onAfterOpen={() => console.log("Modal đã mở")}
+          onAfterClose={() => console.log("Modal đã đóng")}
+        >
+          <div className="p-4">
+            <h3 className="font-bold mb-2">
+              Modal với Modal useRef forwardRef
+            </h3>
+            <p>Mở console để xem log khi mở/đóng.</p>
+            <button
+              className="px-3 py-1 bg-red-500 text-white rounded"
+              onClick={() => modalRef.current.close()}
             >
               Đóng
             </button>
