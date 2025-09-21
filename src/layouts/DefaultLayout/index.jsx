@@ -4,7 +4,7 @@ import SideBar from "./components/SideBar";
 
 const DefaultLayout = () => {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-500">
       <Header />
       <div className="flex">
         <SideBar />

@@ -1,8 +1,10 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
 html {
   font-size: 62.5%;
 }
+
 body {
   font-size: 1.6rem;
 }

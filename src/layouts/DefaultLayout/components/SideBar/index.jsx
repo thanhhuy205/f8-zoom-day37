@@ -40,7 +40,7 @@ const SideBar = () => {
   };
 
   return (
-    <div className="w-40 mt-[66px] bg-gray-50 border-r border-gray-200 flex flex-col items-center py-6 h-screen">
+    <div className="w-40 mt-[66px] bg-gray-50 dark:bg-slate-500 border-r border-gray-200 flex flex-col items-center py-6 h-screen">
       <nav className="flex flex-col space-y-12">
         {menuItems.map((item) => (
           <Link
@@ -49,7 +49,7 @@ const SideBar = () => {
             className={`flex flex-col items-center justify-center p-4 rounded-xl transition-all duration-200 group ${
               isActive(item.path)
                 ? "bg-blue-100 text-blue-600"
-                : "text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                : "text-gray-500 dark:text-white  hover:bg-gray-100 dark:hover:text-black  hover:text-gray-700"
             }`}
           >
             <div
@@ -61,7 +61,9 @@ const SideBar = () => {
             </div>
             <span
               className={`text-xl mt-1 font-medium transition-colors duration-200 ${
-                isActive(item.path) ? "text-blue-600" : "text-gray-400"
+                isActive(item.path)
+                  ? "text-blue-600"
+                  : "text-gray-400 dark:text-white dark:hover:text-black"
               }`}
             >
               {item.label}

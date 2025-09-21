@@ -3,11 +3,12 @@ import { useEffect, useState } from "react";
 const DataFetcher = ({ url, children: Component }) => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(false);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
+      setError(null); //.fix cai nay
       try {
         const response = await fetch(url);
         const data = await response.json();

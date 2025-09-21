@@ -1,4 +1,7 @@
 import { forwardRef, useImperativeHandle, useRef } from "react";
+function rmSpaces(str, replacement) {
+  return /^\s*$/.test(str) ? replacement : str.trim();
+}
 
 const CustomInput = forwardRef((props, ref) => {
   const inputRef = useRef(null);
@@ -13,7 +16,7 @@ const CustomInput = forwardRef((props, ref) => {
           inputRef.current?.blur();
         },
         getValue: () => {
-          return inputRef.current?.value;
+          return rmSpaces(inputRef.current?.value, "Không có gì");
         },
         clear: () => {
           if (inputRef.current) inputRef.current.value = "";
